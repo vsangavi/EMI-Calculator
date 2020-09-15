@@ -1,8 +1,7 @@
 import React, { Component } from "react";
-
 import "./App.css";
-import Piechart from "./Components/Pie";
-import Tenure from "./Components/Tenure";
+import Piechart from "./Components/Piechart";
+
 import Home from "./Components/Home";
 
 class App extends Component {
@@ -26,10 +25,7 @@ class App extends Component {
             label: "EMI",
             //Have to make this data dynamic from dragger value
             data: [4254, 100000],
-            backgroundColor: [
-              "rgba(255, 99, 132, 0.6)",
-              "rgba(54, 162, 235, 0.6)",
-            ],
+            backgroundColor: ["#0899ba", "#ff87ab"],
           },
         ],
       },
@@ -39,8 +35,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Home />
-        <Tenure />
+        <Home/>
         <Piechart chartData={this.state.chartData} legendPosition="bottom" />
       </div>
     );

@@ -23,7 +23,6 @@ class Piechart extends Component {
           options={{
             title: {
               display: true,
-              text: "EMI calculation ",
               fontSize: 25,
             },
             legend: {
