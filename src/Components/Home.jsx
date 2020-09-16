@@ -2,16 +2,17 @@ import React, { Component } from "react";
 import Tenure from "../Components/Tenure";
 import Rate from "../Components/Rate";
 import Amount from "../Components/Amount";
+import Dragger from "../Components/Dragger";
 class Home extends Component {
   constructor(props) {
     super();
     this.state = {
-      years: 1,
+      year: 0,
       rate: 0,
       value: 0,
     };
   }
-//onChange Handler for Amount Component
+  //onChange Handler for Amount Component
   amountHandler = (e, newAmount) => {
     this.setState({
       value: newAmount,
@@ -34,9 +35,17 @@ class Home extends Component {
       //onChange Handlers and the state values are passed as the props to respective Components
       <div>
         {" "}
-        <Amount amountHandler={this.amountHandler} value={this.state.value}/>
+        <Amount amountHandler={this.amountHandler} value={this.state.value} />
         <Rate rate={this.state.rate} rateHandler={this.rateHandler} />
         <Tenure year={this.state.year} yearHandler={this.yearHandler} />
+        <Dragger
+          amountHandler={this.amountHandler}
+          value={this.state.value}
+          rate={this.state.rate}
+          rateHandler={this.rateHandler}
+          year={this.state.year}
+          yearHandler={this.yearHandler}
+        />
       </div>
     );
   }
