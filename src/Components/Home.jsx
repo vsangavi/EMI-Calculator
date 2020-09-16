@@ -5,26 +5,25 @@ import Amount from "../Components/Amount";
 class Home extends Component {
   constructor(props) {
     super();
-   this.state = {
+    this.state = {
       years: 1,
       rate: 0,
       value: 0,
     };
-    /*this.amountHandler=this.amountHandler.bind(this)
-    this.rateHandler = this.rateHandler.bind(this);
-    this.yearHandler = this.yearHandler.bind(this);*/
   }
-  
+//onChange Handler for Amount Component
   amountHandler = (e, newAmount) => {
     this.setState({
       value: newAmount,
     });
   };
+  //onChange Handler for Rate Component
   rateHandler = (e, newRate) => {
     this.setState({
       rate: newRate,
     });
   };
+  //onChange Component for Tenure Component
   yearHandler = (e, newYear) => {
     this.setState({
       year: newYear,
@@ -32,11 +31,12 @@ class Home extends Component {
   };
   render() {
     return (
+      //onChange Handlers and the state values are passed as the props to respective Components
       <div>
         {" "}
-        <Amount amountHandler={this.amountHandler} />
+        <Amount amountHandler={this.amountHandler} value={this.state.value}/>
         <Rate rate={this.state.rate} rateHandler={this.rateHandler} />
-        <Tenure year={this.state.year}yearHandler={this.yearHandler} />
+        <Tenure year={this.state.year} yearHandler={this.yearHandler} />
       </div>
     );
   }

@@ -1,30 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import Typography from "@material-ui/core/Typography";
 import Slider from "@material-ui/core/Slider";
 import { followersMarks } from "../Components/Amountfiles/followersMarks";
 import { numFormatter } from "../Components/Amountfiles/numFormatter";
-const scale = (value) => {
-  const previousMarkIndex = Math.floor(value / 25);
-  console.log(value, "value");
-  const previousMark = followersMarks[previousMarkIndex];
-  console.log(previousMarkIndex, "previousMarkIndex");
-  const remainder = value % 25;
-  if (remainder === 0) {
-    return previousMark.scaledValue;
-  }
-  const nextMark = followersMarks[previousMarkIndex + 1];
-  console.log(nextMark, "nextMark");
-  const increment = (nextMark.scaledValue - previousMark.scaledValue) / 25;
-  return remainder * increment + previousMark.scaledValue;
-};
+import { scale } from "../Components/Amountfiles/scale";
 
-export default function NonLinearSlider() {
-  const [value, setValue] = useState(0);
-
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
-
+//This Component is used to get the principal amount .
+export default function Amount(props) {
+  let { amountHandler, value } = props;
   return (
     <div>
       <Typography gutterBottom>EMI CALCULATION</Typography>
@@ -42,7 +25,7 @@ export default function NonLinearSlider() {
         valueLabelFormat={numFormatter}
         marks={followersMarks}
         scale={scale}
-        onChange={handleChange}
+        onChange={amountHandler}
         valueLabelDisplay="auto"
       />
     </div>
