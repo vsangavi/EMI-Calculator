@@ -9,5 +9,5 @@ export const scale = (value) => {
   }
   const nextMark = followersMarks[previousMarkIndex + 1];
   const increment = (nextMark.scaledValue - previousMark.scaledValue) / 25;
-  return remainder * increment + previousMark.scaledValue;
+  return remainder * increment + previousMark.scaledValue; 
 };

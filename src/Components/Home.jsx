@@ -2,13 +2,14 @@ import React, { Component } from "react";
 import Tenure from "../Components/Tenure";
 import Rate from "../Components/Rate";
 import Amount from "../Components/Amount";
-import Dragger from "../Components/Dragger";
+import Emicalculator from "../Components/Emicalculator";
+
 class Home extends Component {
   constructor(props) {
     super();
     this.state = {
-      year: 0,
-      rate: 0,
+      year: 1,
+      rate: 1,
       value: 0,
     };
   }
@@ -38,7 +39,7 @@ class Home extends Component {
         <Amount amountHandler={this.amountHandler} value={this.state.value} />
         <Rate rate={this.state.rate} rateHandler={this.rateHandler} />
         <Tenure year={this.state.year} yearHandler={this.yearHandler} />
-        <Dragger
+        <Emicalculator
           amountHandler={this.amountHandler}
           value={this.state.value}
           rate={this.state.rate}

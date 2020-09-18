@@ -10,7 +10,7 @@ const Rate = (props) => {
       <Typography>RPA:{rate}</Typography>
       <Slider
         style={{ maxWidth: 500, color: "#0899ba" }}
-        min={0}
+        min={1}
         value={rate} //It gets the value as props from the Home Component
         marks
         max={30}
