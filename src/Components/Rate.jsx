@@ -1,13 +1,15 @@
 import React from "react";
+import "../Styles/rate.css";
 import Slider from "@material-ui/core/Slider";
 import Typography from "@material-ui/core/Typography";
 //This component is to get the Rate Per Annum.
 const Rate = (props) => {
-  let{rate,rateHandler}=props
+  let { rate, rateHandler } = props;
   return (
     <div>
-      <Typography>Rate</Typography>
-      <Typography>RPA:{rate}</Typography>
+      <div className="rate">
+        <Typography>Rate:{rate}</Typography>
+      </div>
       <Slider
         style={{ maxWidth: 500, color: "#0899ba" }}
         min={1}

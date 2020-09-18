@@ -3,10 +3,9 @@ import Slider from "@material-ui/core/Slider";
 import Typography from "@material-ui/core/Typography";
 //This component is to get the mo of years.
 const Tenure = (props) => {
-  let{year,yearHandler}=props
+  let { year, yearHandler } = props;
   return (
     <div>
-      <Typography>Tenure</Typography>
       <Typography>years:{year}</Typography>
       <Slider
         style={{ maxWidth: 500, color: "#0899ba" }}

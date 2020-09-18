@@ -1,0 +1,8 @@
+.typo {
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.value {
+  text-align: right;
+  text-decoration: underline gray;
+}

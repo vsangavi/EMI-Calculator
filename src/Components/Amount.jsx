@@ -1,4 +1,5 @@
 import React from "react";
+import "../Styles/amount.css";
 import Typography from "@material-ui/core/Typography";
 import Slider from "@material-ui/core/Slider";
 import { followersMarks } from "../Components/Amountfiles/followersMarks";
@@ -9,9 +10,12 @@ import { scale } from "../Components/Amountfiles/scale";
 export default function Amount(props) {
   let { amountHandler, value } = props;
   return (
-    <div>
-      <Typography gutterBottom>EMI CALCULATION</Typography>
-      <Typography>Value: {scale(value)}</Typography>
+    <div className="typo">
+      <h3>EMI CALCULATOR</h3>
+      <div className="value">
+        {" "}
+        <Typography>Prinicipal Amount:₹{scale(value)}</Typography>
+      </div>
       <Slider
         style={{
           maxWidth: 500,

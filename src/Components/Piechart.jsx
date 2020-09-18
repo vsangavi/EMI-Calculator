@@ -16,7 +16,6 @@ export default function Piechart(props) {
             display: true,
             position: "top",
           },
-      
         }}
       />
     </div>

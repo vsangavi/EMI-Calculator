@@ -23,9 +23,10 @@ const Emicalculator = (props) => {
   };
   return (
     <div>
-      <div> Monthlyemi={result}</div>
-      <div>Totalinterest={interestTotal}</div>
-
+      <div>
+        {" "}
+        Monthlyemi={result} Totalinterest={interestTotal}
+      </div>
       <Piechart result={result} valueScale={valueScale} chartData={chartData} />
     </div>
   );
