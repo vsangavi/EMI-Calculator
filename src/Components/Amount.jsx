@@ -14,7 +14,7 @@ export default function Amount(props) {
       <h3>EMI CALCULATOR</h3>
       <div className="value">
         {" "}
-        <Typography>Prinicipal Amount:₹{scale(value)}</Typography>
+        <Typography>₹{scale(value)}</Typography>
       </div>
       <Slider
         style={{

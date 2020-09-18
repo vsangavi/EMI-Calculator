@@ -1,4 +1,5 @@
 import React from "react";
+import "../Styles/emi.css"
 import { scale } from "../Components/Amountfiles/scale";
 import { emiCalculation } from "../Components/Calculationfiles/emiCalculation";
 import Piechart from "../Components/Piechart";
@@ -23,7 +24,7 @@ const Emicalculator = (props) => {
   };
   return (
     <div>
-      <div>
+      <div className="emi">
         {" "}
         Monthlyemi={result} Totalinterest={interestTotal}
       </div>
