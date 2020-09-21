@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import "../Styles/emi.css";
 import { data } from "../Components/Value/data";
 import { scale } from "../Components/Amountfiles/scale";
@@ -7,7 +7,7 @@ import Doughchart from "../Components/Doughchart";
 import { totalInterest } from "../Components/Calculationfiles/totalInterest";
 const Emicalculator = (props) => {
   let { rate, year, value } = props;
-  console.log(data.percent);
+
   let lrate = rate / data.percent / data.months;
   let lyear = year * data.months;
   let valueScale = scale(value);
@@ -25,17 +25,45 @@ const Emicalculator = (props) => {
     ],
   };
   return (
-    <div>
-      <div className="emi">
-        {" "}
-        Monthlyemi={result} Totalinterest={interestTotal}
+    <Fragment>
+      <div className="container">
+        <div className="div1">
+          {" "}
+          <b>Monthlyemi: </b>
+          <div>₹{result}</div>
+        </div>
+        <div className="div1">
+          <b>Principal Amount:</b>
+          <div>₹{valueScale}</div>
+        </div>
+        <div className="div1">
+          {" "}
+          <b>Total Interest:</b>
+          <div>₹{interestTotal}</div>
+        </div>
+        <div className="div1">
+          <b>Total Amount:</b>
+          <div>₹{valueScale + interestTotal}</div>
+        </div>
       </div>
+      {/* <div className="div1">
+        {" "}
+        Monthlyemi:₹{result} Principal Amount:₹{valueScale}
+      </div>
+      <div></div>
+      <div className="div2">
+        {" "}
+        Total Intrest:₹{interestTotal} Total Amount:₹
+        {valueScale + interestTotal}
+      </div>
+  <div></div>*/}
+
       <Doughchart
         result={result}
         valueScale={valueScale}
         chartData={chartData}
       />
-    </div>
+    </Fragment>
   );
 };
 export default Emicalculator;

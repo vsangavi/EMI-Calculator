@@ -1,13 +1,29 @@
-.App {
-  text-align: center;
-  width: 500px;
-  box-shadow: inset 3px 2px 5px 2px #dfe2e2, 3px 2px 5px 2px #dfe2e2;
-  padding: 50px;
-  margin: auto;
-  margin-top: 20px;
-  align-items: center;
+@media screen and (max-width: 800px) {
+  .App {
+    width: 60vw;
+    box-shadow: inset 3px 2px 5px 2px #dfe2e2, 3px 2px 5px 2px #dfe2e2;
+    padding: 50px;
+    margin: auto;
+    margin-top: 20px;
+    align-items: center;
+  }
+  .rate {
+    text-align: right;
+    text-decoration: underline rgba(221, 208, 208, 0.719);
+  }
 }
-.rate{
-  text-align: right;
-  text-decoration: underline rgba(221, 208, 208, 0.719);
+@media screen and (min-width: 810px) {
+  .App {
+    text-align: center;
+    width: 500px;
+    box-shadow: inset 3px 2px 5px 2px #dfe2e2, 3px 2px 5px 2px #dfe2e2;
+    padding: 50px;
+    margin: auto;
+    margin-top: 20px;
+    align-items: center;
+  }
+  .rate {
+    text-align: right;
+    text-decoration: underline rgba(221, 208, 208, 0.719);
+  }
 }

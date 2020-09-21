@@ -19,7 +19,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "mocha||true",
+    "test": "mocha --recursive",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

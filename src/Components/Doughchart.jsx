@@ -1,9 +1,12 @@
 import React from "react";
+import "../Styles/doughnut.css";
 import { Doughnut } from "react-chartjs-2";
 function Doughchart(props) {
   return (
     <div>
       <Doughnut
+        className="doughnut"
+        
         data={props.chartData}
         options={{
           title: {
@@ -12,7 +15,7 @@ function Doughchart(props) {
           },
           legend: {
             display: true,
-            position: "top",
+            position: "left",
           },
         }}
       />
