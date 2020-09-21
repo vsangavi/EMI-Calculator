@@ -29,7 +29,7 @@ const Emicalculator = (props) => {
       <div className="container">
         <div className="div1">
           {" "}
-          <b>Monthly emi: </b>
+          <b>Monthly EMI: </b>
           <div>₹{result}</div>
         </div>
         <div className="div1">

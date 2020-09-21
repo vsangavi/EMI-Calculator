@@ -1,4 +1,5 @@
 import React from "react";
+import "../Styles/amount.css";
 import Slider from "@material-ui/core/Slider";
 import Typography from "@material-ui/core/Typography";
 //This component is to get the Rate Per Annum.
@@ -6,7 +7,8 @@ const Rate = (props) => {
   let { rate, rateHandler } = props;
   return (
     <div>
-      <div className="rate">
+      <div className="value">
+        <div className="div1">Rate Of Interest(P.A)</div>{" "}
         <Typography>{rate}%</Typography>
       </div>
       <Slider

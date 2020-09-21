@@ -13,7 +13,9 @@ const Amount = (props) => {
     //returns a slider for principal amount in which users can drag the required amount
     <div className="typo">
       <h3>EMI CALCULATOR</h3>
+  
       <div className="value">
+        <div className="div1">Loan Amount</div>
         {" "}
         <Typography>₹{scale(value)}</Typography>
       </div>

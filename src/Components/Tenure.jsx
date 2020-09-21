@@ -1,4 +1,5 @@
 import React from "react";
+import "../Styles/amount.css";
 import Slider from "@material-ui/core/Slider";
 import Typography from "@material-ui/core/Typography";
 //This component is to get the no.of years.
@@ -6,7 +7,8 @@ const Tenure = (props) => {
   let { year, yearHandler } = props;
   return (
     <div>
-      <div className="rate">
+      <div className="value">
+        <div className="div1">Loan Tenure</div>{" "}
         <Typography>{year}Yr</Typography>
       </div>
       <Slider
