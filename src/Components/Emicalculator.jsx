@@ -46,17 +46,6 @@ const Emicalculator = (props) => {
           <div>₹{valueScale + interestTotal}</div>
         </div>
       </div>
-      {/* <div className="div1">
-        {" "}
-        Monthlyemi:₹{result} Principal Amount:₹{valueScale}
-      </div>
-      <div></div>
-      <div className="div2">
-        {" "}
-        Total Intrest:₹{interestTotal} Total Amount:₹
-        {valueScale + interestTotal}
-      </div>
-  <div></div>*/}
 
       <Doughchart
         result={result}
