@@ -7,9 +7,10 @@ import { numFormatter } from "../Components/Amountfiles/numFormatter";
 import { scale } from "../Components/Amountfiles/scale";
 
 //This Component is used to get the principal amount .
-export default function Amount(props) {
+const Amount = (props) => {
   let { amountHandler, value } = props;
   return (
+    //returns a slider for principal amount in which users can drag the required amount
     <div className="typo">
       <h3>EMI CALCULATOR</h3>
       <div className="value">
@@ -21,7 +22,7 @@ export default function Amount(props) {
           maxWidth: 500,
           color: "#0899ba",
         }}
-        value={value}
+        value={value} //It gets the value as props from the Home Component
         min={0}
         step={1}
         track="normal"
@@ -29,9 +30,10 @@ export default function Amount(props) {
         valueLabelFormat={numFormatter}
         marks={followersMarks}
         scale={scale}
-        onChange={amountHandler}
+        onChange={amountHandler} //It handles the change as a props from Home component
         valueLabelDisplay="auto"
       />
     </div>
   );
-}
+};
+export default Amount;

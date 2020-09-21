@@ -1,8 +1,6 @@
 import React from "react";
 import { Doughnut } from "react-chartjs-2";
-import "../Styles/pie.css";
-
-export default function Piechart(props) {
+function Doughchart(props) {
   return (
     <div>
       <Doughnut
@@ -21,3 +19,4 @@ export default function Piechart(props) {
     </div>
   );
 }
+export default Doughchart;

@@ -1,11 +1,9 @@
 import React from "react";
-import "../Styles/rate.css";
 import Slider from "@material-ui/core/Slider";
 import Typography from "@material-ui/core/Typography";
-//This component is to get the mo of years.
+//This component is to get the no.of years.
 const Tenure = (props) => {
   let { year, yearHandler } = props;
-  
   return (
     <div>
       <div className="rate">
@@ -22,5 +20,4 @@ const Tenure = (props) => {
     </div>
   );
 };
-
 export default Tenure;

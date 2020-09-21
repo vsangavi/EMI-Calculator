@@ -3,7 +3,6 @@ import Tenure from "../Components/Tenure";
 import Rate from "../Components/Rate";
 import Amount from "../Components/Amount";
 import Emicalculator from "../Components/Emicalculator";
-
 class Home extends Component {
   constructor(props) {
     super();
