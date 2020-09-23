@@ -3,7 +3,7 @@ import "../Styles/amount.css";
 import Typography from "@material-ui/core/Typography";
 import Slider from "@material-ui/core/Slider";
 //import { followersMarks } from "../Components/Amountfiles/followersMarks";
-import { numFormatter } from "../Components/Amountfiles/numFormatter.js";
+import { numFormatter } from "./Amountfiles/numFormatter.js";
 import { scale } from "../Components/Amountfiles/scale";
 
 //This Component is used to get the principal amount .

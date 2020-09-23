@@ -1,4 +1,6 @@
-export const totalAmount = (principalValue, emiValue) => {
-  let totalValue = principalValue + emiValue;
-  return totalValue;
+module.exports = {
+  totalAmount: (principalValue, emiValue) => {
+    let totalValue = principalValue + emiValue;
+    return totalValue;
+  },
 };
